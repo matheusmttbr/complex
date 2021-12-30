@@ -18,9 +18,9 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: run travis
-      uses: ktomk/run-travis-yml@v1
+      uses: matheusmttbr/complex@main
       with:
-        #file: .travis.yml
+        file: .travis.yml
         steps:
           before_install
           script
