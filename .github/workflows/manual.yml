@@ -18,7 +18,7 @@ jobs:
       - run: docker build -t mimattos/multi-server ./server
       - run: docker build -t mimattos/multi-worker ./worker
       - run: >-
-          echo "${{DOCKER_PASSWORD}}" | docker login -u "${{DOCKER_ID}}"
+          echo $DOCKER_PASSWORD | docker login -u $DOCKER_ID
           --password-stdin
       - run: docker push mimsttos/multi-client
       - run: docker push mimsttos/multi-nginx
