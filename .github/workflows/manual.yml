@@ -10,15 +10,15 @@ jobs:
           - ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      #- run: >-
+      #    docker build -t mimattos/react-test -f ./client/Dockerfile.dev
+      #    ./client
+      #- run: docker build -t mimattos/multi-client ./client
+      #- run: docker build -t mimattos/multi-nginx ./nginx
+      #- run: docker build -t mimattos/multi-server ./server
+      #- run: docker build -t mimattos/multi-worker ./worker
       - run: >-
-          docker build -t mimattos/react-test -f ./client/Dockerfile.dev
-          ./client
-      - run: docker build -t mimattos/multi-client ./client
-      - run: docker build -t mimattos/multi-nginx ./nginx
-      - run: docker build -t mimattos/multi-server ./server
-      - run: docker build -t mimattos/multi-worker ./worker
-      - run: >-
-          echo $DOCKER_PASSWORD | docker login -u $DOCKER_ID
+          echo ${{ DOCKER_PASSWORD }} | docker login -u ${{ DOCKER_ID }}
           --password-stdin
       - run: docker push mimsttos/multi-client
       - run: docker push mimsttos/multi-nginx
