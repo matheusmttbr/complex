@@ -18,7 +18,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: run travis
-      uses: ./.
+      uses: complex/main
       with:
         file: .travis.yml
         steps:
