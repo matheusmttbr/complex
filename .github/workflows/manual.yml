@@ -22,3 +22,13 @@ jobs:
       - run: docker push mimattos/multi-nginx:latest
       - run: docker push mimattos/multi-server:latest
       - run: docker push mimattos/multi-worker:latest
+
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v20
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+          aws_secret_key: ${{ secrets.AWS_ACCESS_PASSWORD }}
+          application_name: multi-docker
+          environment_name: MultiDocker-env
+          version_label: 12345
+          region: sa-east-1
