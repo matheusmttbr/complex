@@ -13,7 +13,6 @@ jobs:
       - run: >-
           docker build -t mimattos/react-test -f ./client/Dockerfile.dev
           ./client
-      - run: docker run mimattos/react-test npm test -- --coverage
       - run: docker build -t mimattos/multi-client ./client
       - run: docker build -t mimattos/multi-nginx ./nginx
       - run: docker build -t mimattos/multi-server ./server
