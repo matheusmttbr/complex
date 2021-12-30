@@ -20,4 +20,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: run travis
-      uses: matheusmttbr/complex@main
+      uses: ktomk/run-travis-yml@v1
