@@ -21,4 +21,7 @@ jobs:
       uses: ./.
       with:
         file: .travis.yml
-        steps: before_install script after_success
+        steps:
+          before_install
+          script
+          after_success
