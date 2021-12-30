@@ -18,10 +18,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: run travis
-      uses: matheusmttbr/complex@main
-      with:
-        file: .travis.yml
-        steps:
-          before_install
-          script
-          after_success
+      working-directory: .
