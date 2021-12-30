@@ -19,4 +19,4 @@ jobs:
     - name: run travis
       uses: ktomk/run-travis-yml@v1.7.0
       with:
-        file: travis.yml
+        file: . travis.yml
