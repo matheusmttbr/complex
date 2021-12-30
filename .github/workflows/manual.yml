@@ -9,7 +9,7 @@ jobs:
         os:
           - ubuntu-latest
     steps:
-      - uses: matheusmttbr/complex@main
+      - uses: ./.
       - run: >-
           docker build -t mimattos/react-test -f ./client/Dockerfile.dev
           ./client
