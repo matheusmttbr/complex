@@ -18,7 +18,7 @@ jobs:
       - run: docker build -t mimattos/multi-worker ./worker
       - run: >- 
             echo "${{ secrets.DOCKER_PASSWORD }}" | docker login docker.pkg.github.com -u "${{ secrets.DOCKER_ID }}" --password-stdin
-      - run: docker push mimattos/multi-client
-      - run: docker push mimattos/multi-nginx
-      - run: docker push mimattos/multi-server
-      - run: docker push mimattos/multi-worker
+      - run: docker push mimattos/multi-client:latest
+      - run: docker push mimattos/multi-nginx:latest
+      - run: docker push mimattos/multi-server:latest
+      - run: docker push mimattos/multi-worker:latest
