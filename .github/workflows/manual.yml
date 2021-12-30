@@ -20,4 +20,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: run travis
-      uses: ktomk/run-travis-yml@v1
+      uses: ./.
+      with:
+        file: travis.yml
