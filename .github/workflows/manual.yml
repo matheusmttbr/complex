@@ -20,7 +20,7 @@ jobs:
     - name: run travis
       uses: ktomk/run-travis-yml@v1
       with:
-        file: .travis.yml
+        #file: .travis.yml
         steps:
           before_install
           script
