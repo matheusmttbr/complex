@@ -31,4 +31,4 @@ after_success:
 #  on:
 #    branch: master
 #  access_key_id: $aws_access_key
-#  secret_access_key: $aws_secret_key
+#  secret_access_key: $aws_secret_ke
