@@ -1,9 +1,2 @@
-- name: Run .travis.yml build script
-    uses: ktomk/run-travis-yml@v1
-    with:
-      file: .travis.yml
-      steps: |
-        before_install
-        script
-        after_success
-      allow-failure: false
+- name: run .travis.yml
+  uses: ktomk/run-travis-yml@v1.7.0
