@@ -9,7 +9,7 @@ jobs:
         os:
           - ubuntu-latest
     steps:
-      - uses: ./.
+      - uses: actions/checkout@v2
       - run: >-
           docker build -t mimattos/react-test -f ./client/Dockerfile.dev
           ./client
