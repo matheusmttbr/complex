@@ -1,18 +1,13 @@
 name: Converted Workflow
-'on':
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+on: [push, pull_request]
+
 jobs:
   Build:
     runs-on: '${{ matrix.os }}'
     strategy:
       matrix:
         os:
-          - ubuntu-18.04
+          - latest
     steps:
       - uses: matheusmttbr/complex@main
       - run: >-
