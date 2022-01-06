@@ -32,8 +32,9 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_ACCESS_PASSWORD }}
           application_name: multi-docker
           environment_name: Multidocker-env
-          version_label: 12345
+          version_label: 123456
           region: sa-east-1
-          use_existing_version_if_available: true
           deployment_package: multi_docker.zip
+          version_description: ${{github.SHA}}
+          use_existing_version_if_available: true
           existing_bucket_name: elasticbeanstalk-sa-east-1-552561319578
