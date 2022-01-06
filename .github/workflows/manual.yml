@@ -32,7 +32,7 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_ACCESS_PASSWORD }}
           application_name: multi-docker-dev
           environment_name: Multidockerdev-env
-          version_label: 111222333
+          version_label: 1
           region: sa-east-1
           deployment_package: multi_docker.zip
           version_description: ${{github.SHA}}
